@@ -1,0 +1,54 @@
+cabal-version: 2.2
+name:
+  lightning-talks
+version:
+  0.1.0.0
+synopsis:
+  lightning talks i give at haskathon
+-- description:
+homepage:
+  https://github.com/chessai/lightning-talks
+license:
+  BSD-3-Clause
+license-file:
+  LICENSE
+author:
+  chessai
+maintainer:
+  chessai1996@gmail.com
+-- copyright:
+-- category:
+build-type:
+  Simple
+extra-source-files:
+  CHANGELOG.md
+
+executable quickcheck-classes
+  hs-source-dirs:
+    qc
+  main-is:
+    Main.hs
+  build-depends:
+      base >= 4.9 && < 4.13
+    , base-orphans
+    , containers >= 0.5.9 
+    , QuickCheck
+    , tasty
+    , tasty-quickcheck
+    , quickcheck-classes >= 0.5.0.0
+
+executable refined
+  hs-source-dirs:
+    rf
+  main-is:
+    Main.hs
+  build-depends:
+      base >= 4.9 && < 4.13
+    , containers >= 0.5.9 
+    , deepseq
+    , exceptions
+    , mtl
+    , prettyprinter
+    , refined
+    , template-haskell
+    , transformers
